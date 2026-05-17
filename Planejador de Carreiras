@@ -1,0 +1,178 @@
+Planejador de Carreiras
+
+
+Excelente escolha! Vou te passar para meu colega especialista em Engenharia de Software Backend. Ele vai montar todo o plano de estudos personalizado para você!
+
+[HANDOFF PARA AGENT 2 - CONTEXTO DO USUÁRIO]
+
+Carreira escolhida: Engenharia de Software Backend (Foco no ecossistema Java e expansão para C#/.NET)
+
+Horas disponíveis por semana: 6 horas
+
+Nível de experiência: 5 anos atuando com desenvolvimento de chatbots (plataforma low-code em Java). Já possui maturidade técnica buscando oportunidades de nível Pleno/Sênior (com foco em arquitetura corporativa e frameworks robustos).
+
+Objetivo: Transição de empresa para garantir crescimento técnico e de carreira, assumindo desafios maiores.
+
+Preferência: Foco total em Código e resolução de problemas estruturais.
+
+Interesses técnicos mencionados: Inteligência Artificial (com potencial para integrar agentes em arquiteturas backend) e Desenvolvimento Web/Backend corporativo.
+
+
+
+Olá! Recebi suas informações do entrevistador.
+
+Vejo que você escolheu Engenharia de Software Backend (com foco em Arquitetura e IA) e tem 10 horas por semana para estudar. Perfeito!
+
+Vou montar agora seu plano completo personalizado...
+
+🧩 VISÃO DO DIA A DIA
+
+Como é o trabalho de um(a) Engenheira de Software Backend Sênior:
+
+Desenhar e evoluir arquiteturas corporativas baseadas em microsserviços, garantindo escalabilidade e resiliência.
+
+Integrar soluções de Inteligência Artificial e orquestrar agentes de IA em fluxos robustos de backend.
+
+Liderar a resolução de problemas estruturais complexos e refatorar códigos legados para padrões mais modernos.
+
+Construir APIs de alta performance utilizando programação reativa e comunicação assíncrona.
+
+Participar ativamente de discussões de System Design, garantindo entregas que brilhem aos olhos das áreas de negócios e recrutadores técnicos.
+
+🧠 MAPA DE SKILLS
+
+CORE SKILLS (essenciais):
+
+Arquitetura de Microsserviços e System Design
+
+Design Patterns Corporativos (Clean Architecture, DDD)
+
+Desenvolvimento Backend Avançado (Programação Reativa)
+
+NICE-TO-HAVE (complementares):
+
+Orquestração de Agentes de IA no Backend
+
+Integração de Dados Analíticos
+
+FERRAMENTAS E TECNOLOGIAS:
+
+Ecossistema Java (Spring WebFlux) e C#/.NET Core
+
+Python (para integrações analíticas e scripts de dados)
+
+Mensageria (Kafka/RabbitMQ) e Bancos de Dados (Relacionais/NoSQL)
+
+📅 ROADMAP DE 90 DIAS
+
+ADAPTADO PARA: 10 horas/semana
+
+MÊS 1 - FUNDAMENTOS
+
+SEMANA 1-2:
+
+Consolidar conceitos de Clean Architecture aplicados ao desenvolvimento corporativo em C# e Java.
+
+Mapear e aplicar padrões de design (Design Patterns) voltados para resiliência de microsserviços.
+
+SEMANA 3-4:
+
+Aprofundar estudos em Programação Reativa, com foco prático em Spring WebFlux.
+
+Explorar o funcionamento interno de concorrência e gerenciamento de memória em ecossistemas robustos (.NET e JVM).
+
+MÊS 2 - PRÁTICA
+
+SEMANA 5-6:
+
+Criar a base de um novo microsserviço integrando C#/.NET com scripts analíticos em Python via banco de dados embutido (ex: SQLite).
+
+Implementar fluxos de orquestração de agentes de IA focados em processamento de dados do usuário.
+
+SEMANA 7-8:
+
+Adicionar camadas de mensageria assíncrona na arquitetura do seu projeto para simular um ambiente de alta demanda.
+
+Escrever testes de integração e testes unitários garantindo cobertura padrão de mercado financeiro.
+
+MÊS 3 - PORTFÓLIO E PREPARAÇÃO
+
+SEMANA 9-10:
+
+Finalizar o refinamento técnico do projeto de portfólio, focando em documentação (README) altamente atrativa para tech recruiters.
+
+Preparar a apresentação da arquitetura do projeto (System Design) como se estivesse validando com stakeholders.
+
+SEMANA 11-12:
+
+Realizar simulações focadas de entrevistas técnicas para vagas de nível Pleno/Sênior.
+
+Revisar conceitos de escalabilidade, gargalos de performance e tomada de decisão arquitetural.
+
+🚀 PROJETO DE PORTFÓLIO
+
+PROJETO: TaskFlow AI Orchestrator
+
+O QUE FAZER:
+Um sistema backend corporativo que atua como maestro para tarefas complexas. O núcleo será em .NET (ou Java), expondo APIs reativas. Esse backend receberá comandos, acionará agentes de IA para interpretar a requisição, e delegará o processamento analítico pesado para um serviço em Python, utilizando um banco leve como SQLite para persistência rápida dos resultados.
+
+ENTREGÁVEIS:
+
+Repositório no GitHub com código limpo, separado em camadas (Clean Architecture).
+
+Documentação de Arquitetura (diagramas de componentes e sequência).
+
+Cobertura de testes e instruções claras de como rodar a aplicação via Docker.
+
+CRITÉRIOS DE ACEITAÇÃO:
+
+A comunicação entre o backend principal e o script Python deve ser robusta e tratar falhas.
+
+O código deve demonstrar aplicação clara de SOLID e injeção de dependências.
+
+O sistema deve processar adequadamente prompts direcionados aos agentes de IA sem travar a thread principal.
+
+DICA: Trate este projeto como um produto real. A forma como você documenta as decisões arquiteturais (o "porquê" de cada tecnologia) é o que vai capturar a atenção de líderes técnicos e tech recruiters em processos seletivos competitivos.
+
+💬 ROTEIRO DE ENTREVISTAS
+
+PERGUNTA 1: Como você decidiria entre usar uma abordagem síncrona (Spring MVC) e uma assíncrona/reativa (Spring WebFlux) em um novo serviço?
+COMO RESPONDER:
+Abordar o trade-off entre complexidade e escalabilidade. Mencionar que usaria MVC para serviços com regras de negócio complexas mas volume previsível de conexões curtas, e WebFlux para cenários de alta concorrência com I/O intensivo, onde não se pode bloquear threads, demonstrando visão madura de arquitetura.
+
+PERGUNTA 2: Como você estrutura a comunicação entre microsserviços em cenários onde a consistência de dados é crítica?
+COMO RESPONDER:
+Explicar a aplicação de padrões como o Saga Pattern (Coreografia ou Orquestração) para gerenciar transações distribuídas, aliado a um bom sistema de mensageria, garantindo resiliência e eventual consistência corporativa.
+
+PERGUNTA 3: Conte sobre um projeto onde você teve que resolver um problema estrutural no código ou em produção. Qual foi sua abordagem?
+COMO RESPONDER:
+Descrever o cenário com o framework STAR (Situação, Tarefa, Ação, Resultado). Focar na sua habilidade de ler código legado, isolar a falha (seja em integrações ou lógica de negócio), propor a correção arquitetural e gerenciar a expectativa técnica do cliente ou equipe.
+
+PERGUNTA 4: Como você vê a integração de Agentes de IA em arquiteturas tradicionais de backend corporativo?
+COMO RESPONDER:
+Destacar que agentes de IA devem ser tratados como integrações externas que podem ter latência imprevisível. Sugerir o uso de chamadas assíncronas, filas para não gargalar as APIs expostas ao cliente, e um bom design de prompts para manter o processamento eficiente e seguro.
+
+PERGUNTA 5: Qual sua estratégia para migrar ou expandir sua stack de Java para .NET em aplicações de grande porte?
+COMO RESPONDER:
+Focar na transferência de conceitos estruturais, já que ambas as plataformas compartilham paradigmas muito similares (Orientação a Objetos, ecossistemas robustos de injeção de dependência). Demonstrar que o foco está na arquitetura, sendo a linguagem uma ferramenta, e citar seu estudo ativo no ecossistema C#/.NET Core para mapear equivalências.
+
+🎓 TRILHA DIO RECOMENDADA
+
+TRILHA: Bootcamp Coding The Future Banco PAN - Backend com .NET e C# (ou Formação Arquiteto de Software)
+
+POR QUE ESSA TRILHA:
+Essa trilha conecta perfeitamente sua bagagem sólida atual com o ecossistema C# e padrões arquiteturais exigidos pelas grandes instituições do mercado financeiro e corporativo. Ela fornece o selo de prática com tecnologias altamente demandadas para vagas de nível Pleno e Sênior, tornando seu perfil irresistível para os recrutadores que buscam maturidade em backend.
+
+PRÓXIMOS PASSOS:
+
+Acesse dio.me
+
+Busque por "Coding The Future Banco PAN" ou "Formação Arquiteto"
+
+Inscreva-se gratuitamente
+
+Siga o cronograma junto com este roadmap
+
+✨ Seu plano está pronto!
+
+Lembre-se: o mais importante é a constância, não a velocidade. Comece pela Semana 1 e vá no seu ritmo.
