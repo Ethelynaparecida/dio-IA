@@ -1,0 +1,396 @@
+/* ============================================================================
+   CSS CUSTOM PROPERTIES
+   ============================================================================ */
+
+:root {
+  /* Eco-friendly Color Palette */
+  --primary: #10b981;
+  --secondary: #059669;
+  --accent: #34d399;
+  --danger: #ef4444;
+  --warning: #f59e0b;
+  --info: #3b82f6;
+  --text: #1f2937;
+  --text-light: #6b7280;
+  --bg: #f3f4f6;
+  --white: #ffffff;
+
+  /* Spacing Scale */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 0.75rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 3rem;
+
+  /* Border Radius */
+  --radius: 0.5rem;
+  --radius-lg: 1rem;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+/* ============================================================================
+   BASE STYLES
+   ============================================================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue',
+    Arial, sans-serif;
+  background: linear-gradient(135deg, #d4fc79 0%, #96e6a1 100%);
+  min-height: 100vh;
+  color: var(--text);
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+/* ============================================================================
+   UTILITY CLASSES
+   ============================================================================ */
+
+.hidden {
+  display: none !important;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: var(--spacing-lg);
+}
+
+/* ============================================================================
+   HEADER STYLES
+   ============================================================================ */
+
+.page-header {
+  background-color: var(--white);
+  box-shadow: var(--shadow-md);
+  padding: var(--spacing-xl) var(--spacing-md);
+  margin-bottom: var(--spacing-xl);
+}
+
+.page-header__content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.page-header__title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.page-header__subtitle {
+  font-size: 1rem;
+  color: var(--text-light);
+  line-height: 1.5;
+}
+
+/* ============================================================================
+   FORM STYLES
+   ============================================================================ */
+
+.calculator {
+  max-width: 600px;
+  margin: 0 auto var(--spacing-xl);
+  padding: var(--spacing-lg);
+  background-color: var(--white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+}
+
+.calculator__form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.calculator__field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.calculator__field--full {
+  grid-column: 1 / -1;
+}
+
+.calculator__field--inline {
+  flex-direction: row;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.calculator__label {
+  font-weight: 600;
+  color: var(--text);
+  font-size: 0.95rem;
+}
+
+.calculator__input {
+  padding: var(--spacing-md);
+  border: 2px solid var(--bg);
+  border-radius: var(--radius);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.calculator__input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+  background-color: rgba(16, 185, 129, 0.02);
+}
+
+.calculator__input:readonly {
+  background-color: var(--bg);
+  cursor: not-allowed;
+  color: var(--text-light);
+}
+
+.calculator__help {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  margin-top: -var(--spacing-sm);
+}
+
+.calculator__checkbox {
+  cursor: pointer;
+  accent-color: var(--primary);
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.calculator__checkbox-label {
+  cursor: pointer;
+  font-weight: 500;
+  color: var(--text);
+  user-select: none;
+}
+
+/* ============================================================================
+   TRANSPORT MODE GRID
+   ============================================================================ */
+
+.calculator__fieldset {
+  border: none;
+  padding: 0;
+}
+
+.calculator__legend {
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: var(--spacing-md);
+  font-size: 0.95rem;
+}
+
+.calculator__transport-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: var(--spacing-md);
+}
+
+@media (min-width: 768px) {
+  .calculator__transport-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.calculator__transport-option {
+  position: relative;
+  border: 2px solid var(--bg);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-md);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-sm);
+  text-align: center;
+  transition: all 0.3s ease;
+  background-color: var(--white);
+}
+
+.calculator__transport-option:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--primary);
+}
+
+.calculator__transport-input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.calculator__transport-input:checked + .calculator__transport-icon + .calculator__transport-text {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.calculator__transport-input:checked ~ .calculator__transport-option-bg {
+  border-color: var(--primary);
+  background-color: rgba(16, 185, 129, 0.05);
+}
+
+.calculator__transport-option:has(.calculator__transport-input:checked) {
+  border-color: var(--primary);
+  border-width: 2px;
+  background-color: rgba(16, 185, 129, 0.05);
+}
+
+.calculator__transport-icon {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.calculator__transport-text {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text);
+  transition: color 0.3s ease;
+}
+
+/* ============================================================================
+   FORM ACTIONS
+   ============================================================================ */
+
+.calculator__actions {
+  display: flex;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-md);
+}
+
+.calculator__submit-button {
+  flex: 1;
+  padding: var(--spacing-md) var(--spacing-lg);
+  background-color: var(--primary);
+  color: var(--white);
+  border: none;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.calculator__submit-button:hover {
+  background-color: var(--secondary);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.calculator__submit-button:active {
+  transform: translateY(0);
+}
+
+/* ============================================================================
+   RESULT SECTIONS
+   ============================================================================ */
+
+.result,
+.comparison,
+.carbon-credits {
+  max-width: 600px;
+  margin: 0 auto var(--spacing-xl);
+  padding: var(--spacing-lg);
+  background-color: var(--white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+}
+
+.result__content,
+.comparison__content,
+.carbon-credits__content {
+  /* Content will be populated by JavaScript */
+}
+
+/* ============================================================================
+   FOOTER STYLES
+   ============================================================================ */
+
+.page-footer {
+  background-color: var(--white);
+  box-shadow: var(--shadow-md);
+  padding: var(--spacing-lg) var(--spacing-md);
+  margin-top: auto;
+  text-align: center;
+}
+
+.page-footer__text {
+  color: var(--text-light);
+  font-size: 0.9rem;
+}
+
+/* ============================================================================
+   RESPONSIVE DESIGN
+   ============================================================================ */
+
+@media (max-width: 768px) {
+  .page-header__title {
+    font-size: 1.5rem;
+  }
+
+  .calculator {
+    padding: var(--spacing-md);
+  }
+
+  .calculator__transport-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .page-header {
+    padding: var(--spacing-lg) var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .page-header__title {
+    font-size: 1.25rem;
+  }
+
+  .page-header__subtitle {
+    font-size: 0.9rem;
+  }
+
+  .calculator {
+    margin: 0 var(--spacing-md) var(--spacing-lg);
+    padding: var(--spacing-md);
+    border-radius: var(--radius);
+  }
+
+  .calculator__submit-button {
+    padding: var(--spacing-sm) var(--spacing-md);
+    font-size: 0.9rem;
+  }
+}
